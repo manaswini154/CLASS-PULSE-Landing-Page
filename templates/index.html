@@ -1,288 +1,423 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel ="icon" type = "image/png" href="{{ url_for('static', filename='img/logo.png') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASS PULSE | AI Powered Attendance System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Pulse — AI-Powered Attendance</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class = 'navbar'>
-        <div class="logo">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" style = "height: 32px " alt="ClassPulse Logo" class="logo-image">
-            <span class="logo-text" style="font-family: Arial, Helvetica, sans-serif ; font-weight: 700;">CLASS PULSE</span>
-        </div>
-        <div class = "nav-links">
-            <a href="#">Home</a>
-            <a href="#features">Features</a>
-            <a href="#journey">Journey</a>
-            <a href="#tech">Tech Stack</a>
-        </div>
 
-        <div class = 'nav-cta' style="display: flex; align-items: center;">
-            <a href="https://class-pulse-main.streamlit.app/" class ='btn-pill'>
-                Start AI Attendance
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><path d="M18.25 15.5a.75.75 0 0 1-.75-.75V7.56L7.28 17.78a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L16.44 6.5H9.25a.75.75 0 0 1 0-1.5h9a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75Z"></path></svg>
-            </a>
-            
-        </div>
-    </nav>
-<header class = 'hero'>
-<div class = 'badge'>Welcome to CLASS PULSE!</div>
-<h1>AI Powered <br>Attendance<span> System</span></h1>
-<p>Upgrade your classroom with AI that tracks attendance instantly using face recognition. No more manual roll calls—just fast, accurate, and stress-free management so you can focus entirely on teaching.</p>
-<div class="hero-actions" style="display: flex; align-items: center;">
-    <a href="https://class-pulse-main.streamlit.app/" class ='btn-cta'>
-        Start AI Attendance
-        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><path d="M18.25 15.5a.75.75 0 0 1-.75-.75V7.56L7.28 17.78a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L16.44 6.5H9.25a.75.75 0 0 1 0-1.5h9a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75Z"></path></svg>
+  <!-- ═══════════════════════════════════════ NAV ═══ -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 1L21 6.5V12C21 16.97 16.97 21 12 21H10C5.03 21 1 16.97 1 12V6.5L11 1Z" fill="white" fill-opacity="0.9"/>
+          <circle cx="11" cy="11" r="3" fill="#1a2744" fill-opacity="0.4"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Class Pulse</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#journey">Journey</a>
+      <a href="#tech">Tech</a>
+    </div>
+
+    <a href="https://class-pulse-main.streamlit.app/" class="nav-cta" target="_blank">
+      Launch App
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
     </a>
-<a href="#journey" class="link-action">Explore Journey</a>
-</div>
+  </nav>
 
-<div class = "floating-card card-left">
-    <div class="card-img">
-        <img src="{{ url_for('static', filename='img/homescreen.png') }}" alt="landing img 1">
+  <!-- ═══════════════════════════════════════ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        AI-Powered Classroom Technology
+      </div>
+
+      <h1 class="hero-title">
+        Attendance that<br>
+        <em>thinks for you</em>
+      </h1>
+
+      <p class="hero-sub">
+        Replace manual roll calls with intelligent face &amp; voice recognition.
+        Class Pulse marks every student in seconds — so you can teach.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://class-pulse-main.streamlit.app/" class="btn-primary" target="_blank">
+          Start Free
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <a href="#journey" class="btn-ghost">See how it works</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3s</span>
+          <span class="stat-label">Average scan time</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">99%</span>
+          <span class="stat-label">Recognition accuracy</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Manual roll calls</span>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class = "floating-card card-right">
-    <div class="card-img">
-        <img src="{{ url_for('static', filename='img/teacher login.png') }}" alt="landing img 2">
+    <div class="hero-visual">
+      <div class="screen-stack">
+        <div class="screen screen-back">
+          <img src="{{ url_for('static', filename='img/attendance.png') }}" alt="Manage subjects">
+        </div>
+        <div class="screen screen-front">
+          <img src="{{ url_for('static', filename='img/homescreen.png') }}" alt="App home screen">
+        </div>
+        <div class="screen-badge badge-face">
+          <span class="badge-icon">🧐</span>
+          <div>
+            <div class="badge-title">Face Scan</div>
+            <div class="badge-sub">3 students detected</div>
+          </div>
+        </div>
+        <div class="screen-badge badge-voice">
+          <span class="badge-icon">🎙️</span>
+          <div>
+            <div class="badge-title">Voice Match</div>
+            <div class="badge-sub">98% confidence</div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</header>
+  </section>
 
-<section id="features" class="features">
+  <!-- ═══════════════════════════════════════ FEATURES ═══ -->
+  <section id="features" class="features">
+    <div class="section-label">What makes it special</div>
+    <h2 class="section-title">Intelligent by design</h2>
+    <p class="section-sub">Three AI modes. One seamless workflow. Zero friction.</p>
 
-    <h2 style = 'margin-bottom: 20px; font-size: 60px; font-weight: 800;'>Innovative Features</h2>
+    <div class="features-grid">
 
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="f-icon-box">🧐</div>
-            <h3>AI Face Analysis</h3>
-            <p>
-                Advanced neural networks recognize every student's face from a single class photo, making attendance instant and accurate.
-            </p>
+      <div class="feat-card feat-card-large">
+        <div class="feat-icon">🧐</div>
+        <h3>AI Face Analysis</h3>
+        <p>Advanced neural networks scan a single class photo and recognise every enrolled student instantly — no individual scanning, no delays.</p>
+        <div class="feat-visual">
+          <img src="{{ url_for('static', filename='img/attendance.png') }}" alt="Face analysis">
         </div>
-    <div class="feature-card">
-            <div class="f-icon-box">🎙️</div>
-            <h3>Sequential Voice ID</h3>
-            <p>
-                Students say "Present" one-by-one, and our audio-Al matches their voice biometrics against stored embeddings in real-time.
-            </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🎙️</div>
+        <h3>Sequential Voice ID</h3>
+        <p>Students say "Present" one by one. Our audio AI matches voice biometrics against stored embeddings in real-time.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">📱</div>
+        <h3>QR Enrollment</h3>
+        <p>Every subject generates a unique QR code. Students scan and join instantly — no manual data entry ever.</p>
+      </div>
+
+      <div class="feat-card feat-card-wide">
+        <div class="feat-icon">📊</div>
+        <h3>Live Attendance Records</h3>
+        <p>Every session is logged, timestamped, and queryable. Students track their own attendance stats. Teachers get an instant overview of who's been present across all classes.</p>
+        <div class="feat-visual-wide">
+          <img src="{{ url_for('static', filename='img/attendance verification.png') }}" alt="Attendance records">
         </div>
-    <div class="feature-card">
-            <div class="f-icon-box">📱</div>
-            <h3>QR-Driven Rooster</h3>
-            <p>
-                Course codes generate unique QR codes for instant student enrollment. No more manual entry or data management headaches.
-            </p>
-        </div>
-    </div>
-
-
-</section>
-
-
-</section>
-
-<section id="tech" class="tech-stack">
-    <div class="sectioon-tag">--- Our Backend ---</div>
-    <h2> Advanced Tech Stack</h2>
-
-    <div class="tech-grid">
-
-        <div class="tech-item">
-            <div class="tech-card">
-                <div class="t-icon">⚡</div>
-                <h4>Streamlit & Flask</h4>
-                <p>Reactive frontend architecture paired with a robust Flask landing layer.</p>
-            </div>
-            <span class="tech-tag">Platform</span>
-        </div>
-
-    <div class="tech-item">
-            <div class="tech-card">
-                <div class="t-icon">👁️</div>
-                <h4>Face Recognition</h4>
-                <p>Leveraging Face Recognition and Dlib for high-fidelity facial biometrics.</p>
-            </div>
-            <span class="tech-tag">Vision AI</span>
-        </div>
-
-    <div class="tech-item">
-            <div class="tech-card">
-                <div class="t-icon">🎙️</div>
-                <h4>Voice Embedding</h4>
-                <p>Utilizing Resemblyzer and Librosa for unique student voice signatures</p>
-            </div>
-            <span class="tech-tag">Audible AI</span>
-        </div>
-
-    <div class="tech-item">
-            <div class="tech-card">
-                <div class="t-icon">☁️</div>
-                <h4>Supabase Cloud</h4>
-                <p>Real-time PostgreSQL. infrastructure with secure auth and sync</p>
-            </div>
-            <span class="tech-tag">Storage</span>
-        </div>
-    </div>
-</section>
-
-<section id="journey" class="workflow-section">
-    <div class="flow-container">
-        <div class="section-tag">--- Teacher Workflow ---</div>
-        <h2 class="flow-title">The Teacher's Journey</h2>
-
-        <div class="flow-step">
-            <div class="flow-content">
-                <div class="step-badge">STEP 01</div>
-                <h3>Secure Dashboard Access</h3>
-                <p>Log in to your personalized command center to manage subjects and track student engagement in real-time.</p>
-            </div>
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/teacher login.png') }}" alt="Teacher Login">
-            </div>
-        </div>
-
-        <div class="flow-step flow-step-reverse">
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/manage subjects.png') }}" alt="Manage Subjects">
-            </div>
-            <div class="flow-content">
-                <div class="step-badge">STEP 02</div>
-                <h3>Organize Your Classes</h3>
-                <p>Create new subjects and generate unique join codes or QR codes for seamless student enrollment.</p>
-            </div>
-        </div>
-
-        <div class="flow-step">
-            <div class="flow-content">
-                <div class="step-badge">STEP 03</div>
-                <h3>AI-Powered Verification</h3>
-                <p>Take attendance effortlessly using Face ID analysis or Voice recognition. No more manual roll calls.</p>
-            </div>
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/take attendance.png') }}" alt="Take Attendance">
-            </div>
-        </div>
-
-        <div class="flow-step flow-step-reverse">
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/attendacnce verification.png') }}" alt="Verification">
-            </div>
-            <div class="flow-content">
-                <div class="step-badge">STEP 04</div>
-                <h3>Review & Save</h3>
-                <p>Verify the AI's detections to ensure 100% accuracy before saving the records to the cloud.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="student-journey" class="workflow-section secondary-bg">
-    <div class="flow-container">
-        <div class="section-tag">--- Student Workflow ---</div>
-        <h2 class="flow-title">The Student's Journey</h2>
-
-        <div class="flow-step">
-            <div class="flow-content">
-                <div class="step-badge">STEP 01</div>
-                <h3>Face ID Registration</h3>
-                <p>Students register their unique facial profile to enable secure, biometric attendance marking.</p>
-            </div>
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/student profile creation.png') }}" alt="Profile Creation">
-            </div>
-        </div>
-
-        <div class="flow-step flow-step-reverse">
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/student subject enroll.png') }}" alt="Enrollment">
-            </div>
-            <div class="flow-content">
-                <div class="step-badge">STEP 02</div>
-                <h3>Easy Enrollment</h3>
-                <p>Join classes instantly by entering a subject code provided by the teacher.</p>
-            </div>
-        </div>
-
-        <div class="flow-step">
-            <div class="flow-content">
-                <div class="step-badge">STEP 03</div>
-                <h3>Track Progress</h3>
-                <p>View enrolled subjects and monitor personal attendance statistics through a clean, intuitive dashboard.</p>
-            </div>
-            <div class="flow-image">
-                <img src="{{ url_for('static', filename='img/student dashboard.png') }}" alt="Student Dashboard">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="purple-section">
-  <h2>Ready to upgrade your classroom?</h2>
-  <p>Join thousands of educators who have simplified their day with SnapClass. The smartest AI powered attendance system is just on</p>
-
-  <a href="https://class-pulse-main.streamlit.app/" class="btn-white">Start AI Attendance Now<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg"><path d="M18.25 15.5a.75.75 0 0 1-.75-.75V7.56L7.28 17.78a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L16.44 6.5H9.25a.75.75 0 0 1 0-1.5h9a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75Z"></path></svg> </a>
-
-</section>
-
-
-
-
-
-<footer class = 'main-footer'>
-<div class="footer-grid">
-    <div class = 'footer-brand'>
-        <div>
-            <img src="{{ url_for('static', filename='img/logo.png') }}" style="height: 32px;" alt="Class Pulse Logo" class ='logo'>
-            <div class="logo-text">CLASS PULSE</div>
-        </div>
-        <p>
-            The next Generation of Classroom Management, powered by Advanced AI Biometrics!!
-        </p>
+      </div>
 
     </div>
-    <div class = 'footer-links'>
-        <h4>Products</h4>
-        <ul>
-            <li><a href = '#features'>AI Attendance</a></li>
-            <li><a href = '#features'>Smart Roaster</a></li>
-            <li><a href = '#tech'>Tech Stack</a></li>
-            <li><a href = '#stuent-journey'>Student Portal</a></li>
-        </ul>
+  </section>
 
+  <!-- ═══════════════════════════════════════ JOURNEY ═══ -->
+  <section id="journey" class="journey">
+    <div class="journey-inner">
+
+      <div class="journey-header">
+        <div class="section-label">Step by step</div>
+        <h2 class="section-title">The Teacher's Journey</h2>
+      </div>
+
+      <div class="journey-steps">
+
+        <div class="j-step j-step-flip">
+          <div class="j-step-meta">
+            <div class="j-num">01</div>
+            <div class="j-line"></div>
+          </div>
+          <div class="j-body">
+            <div class="j-img">
+              <img src="{{ url_for('static', filename='img/teacher profile.png') }}" alt="Verification">
+            </div>
+            <div class="j-text">
+              <h3>Easy Profile Creation</h3>
+              <p>Join the <span>CLASS PULSE</span> Smart Community and make Your Classroom Attendance process effortless</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="j-step">
+          <div class="j-step-meta">
+            <div class="j-num">02</div>
+            <div class="j-line"></div>
+          </div>
+          <div class="j-body">
+            <div class="j-text">
+              <h3>Secure Dashboard Access</h3>
+              <p>Log in with your credentials to reach a personalised command centre — manage subjects, students, and sessions all in one place.</p>
+            </div>
+            <div class="j-img">
+              <img src="{{ url_for('static', filename='img/teacher login.png') }}" alt="Teacher login">
+            </div>
+          </div>
+        </div>
+
+        <div class="j-step j-step-flip">
+          <div class="j-step-meta">
+            <div class="j-num">03</div>
+            <div class="j-line"></div>
+          </div>
+          <div class="j-body">
+            <div class="j-img">
+              <img src="{{ url_for('static', filename='img/manage subject.png') }}" alt="Manage subjects">
+            </div>
+            <div class="j-text">
+              <h3>Organise Your Classes</h3>
+              <p>Create subjects and generate unique join codes or QR codes in one click. Students enrol themselves — you do nothing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="j-step">
+          <div class="j-step-meta">
+            <div class="j-num">04</div>
+            <div class="j-line"></div>
+          </div>
+          <div class="j-body">
+            <div class="j-text">
+              <h3>AI-Powered Verification</h3>
+              <p>Upload a class photo or record a voice clip. The AI identifies every student and prepares an attendance draft in seconds.</p>
+            </div>
+            <div class="j-img">
+              <img src="{{ url_for('static', filename='img/attendance.png') }}" alt="Take attendance">
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="j-step j-step-flip">
+          <div class="j-step-meta">
+            <div class="j-num">05</div>
+            <div class="j-line"></div>
+          </div>
+          <div class="j-body">
+            <div class="j-img">
+              <img src="{{ url_for('static', filename='img/attendance verification.png') }}" alt="Verification">
+            </div>
+            <div class="j-text">
+              <h3>Review &amp; Save</h3>
+              <p>Verify the AI detections, make any corrections, and confirm. Records are saved to the cloud instantly, accessible forever.</p>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
     </div>
-    <div class = 'footer-links'>
+  </section>
+
+  <!-- ═══════════════════════════════════════ STUDENT ═══ -->
+  <section id="student-journey" class="student-journey">
+    <div class="journey-inner">
+
+      <div class="journey-header">
+        <div class="section-label">For students too</div>
+        <h2 class="section-title">The Student's Journey</h2>
+      </div>
+
+      <div class="student-cards">
+
+        <div class="s-card">
+          <div class="s-num">01</div>
+          <div class="s-img">
+            <img src="{{ url_for('static', filename='img/student face login.png') }}" alt="Profile creation">
+          </div>
+          <h3>Face ID Registration</h3>
+          <p>A one-time facial profile setup. Point the camera, click, done.</p>
+        </div>
+
+        <div class="s-card s-card-accent">
+          <div class="s-num">02</div>
+          <div class="s-img">
+            <img src="{{ url_for('static', filename='img/QR.png') }}" alt="Enrollment">
+          </div>
+          <h3>Easy Enrollment</h3>
+          <p>Enter a subject code or scan a QR. Enrolled in under five seconds.</p>
+        </div>
+
+        <div class="s-card">
+          <div class="s-num">03</div>
+          <div class="s-img">
+            <img src="{{ url_for('static', filename='img/student dashboard.png') }}" alt="Student dashboard">
+          </div>
+          <h3>Track Your Progress</h3>
+          <p>See attendance stats for every subject, updated after every class.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ TECH STACK ═══ -->
+  <section id="tech" class="tech">
+    <div class="tech-inner">
+      <div class="section-label">Under the hood</div>
+      <h2 class="section-title">Built on serious tech</h2>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">⚡</div>
+          <span class="tech-tag">Platform</span>
+          <h4>Streamlit &amp; Flask</h4>
+          <p>Reactive app frontend paired with a Flask landing layer for seamless delivery.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">👁️</div>
+          <span class="tech-tag">Vision AI</span>
+          <h4>Face Recognition</h4>
+          <p>Face Recognition + Dlib powering high-fidelity biometric detection at scale.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🎙️</div>
+          <span class="tech-tag">Audio AI</span>
+          <h4>Voice Embedding</h4>
+          <p>Resemblyzer + Librosa extract unique voice signatures from short recordings.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">☁️</div>
+          <span class="tech-tag">Storage</span>
+          <h4>Supabase Cloud</h4>
+          <p>Real-time PostgreSQL infrastructure with secure auth and instant sync.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CTA ═══ -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-orb cta-orb-1"></div>
+      <div class="cta-orb cta-orb-2"></div>
+      <div class="section-label" style="color:rgba(255,255,255,0.5);">Ready when you are</div>
+      <h2>Stop calling the roll.<br>Start teaching.</h2>
+      <p>Class Pulse handles attendance so you never have to think about it again.</p>
+      <a href="https://class-pulse-main.streamlit.app/" class="btn-cta-white" target="_blank">
+        Start AI Attendance — it's free
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-mark">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+              <path d="M11 1L21 6.5V12C21 16.97 16.97 21 12 21H10C5.03 21 1 16.97 1 12V6.5L11 1Z" fill="white" fill-opacity="0.8"/>
+              <circle cx="11" cy="11" r="3" fill="#1a2744" fill-opacity="0.4"/>
+            </svg>
+          </div>
+          <span>Class Pulse</span>
+        </div>
+        <p>The next generation of classroom management, powered by advanced AI biometrics.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">AI Attendance</a>
+        <a href="#features">Smart Roster</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#student-journey">Student Portal</a>
+      </div>
+
+      <div class="footer-col">
         <h4>Experience</h4>
-        <ul>
-            <li><a href = '#journey'>Teacher Journey</a></li>
-            <li><a href = '#journey'>Student Journey</a></li>
-            <li><a href = '#features'>Voice ID Roll-Call</a></li>
-            <li><a href = '#features'>Face ID Scan</a></li>
-        </ul>
+        <a href="#journey">Teacher Journey</a>
+        <a href="#student-journey">Student Journey</a>
+        <a href="#features">Voice ID</a>
+        <a href="#features">Face ID</a>
+      </div>
 
-    </div>
-    <div class = 'footer-links'>
+      <div class="footer-col">
         <h4>Company</h4>
-        <ul>
-            <li><a href = '#features'>About Us</a></li>
-            <li><a href = '#journey'>How it works</a></li>
-            <li><a href = '#tech'>Privacy Policy</a></li>
-            <li><a href = '#stuent-journey'>Terms of Use</a></li>
-        </ul>
-
+        <a href="#">About Us</a>
+        <a href="#">How it works</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
     </div>
-   
-</div>  
-<div class = 'footer-bottom'>
-    <p>&copy; 2026 Class Pulse AI. Built with &hearts; for Educators Everywhere</p>
-</div>  
-</footer>
 
+    <div class="footer-bottom">
+      <p>© 2026 Class Pulse AI &nbsp;·&nbsp; Built with ♥ for Educators Everywhere</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.feat-card, .j-step, .s-card, .tech-card, .section-title, .section-sub, .hero-stats').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Navbar shrink on scroll
+    const nav = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('navbar-scrolled', window.scrollY > 40);
+    });
+  </script>
 </body>
 </html>
